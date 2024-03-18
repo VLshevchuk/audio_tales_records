@@ -10,7 +10,10 @@ import 'package:audio_tales_app/utils/recorder.dart';
 import 'package:flutter/foundation.dart';
 
 class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+
+   MyWidget({
+    super.key,
+  });
 
   @override
   State<MyWidget> createState() => _MyWidgetState();
@@ -76,6 +79,7 @@ class _MyWidgetState extends State<MyWidget> {
 
   @override
   Widget build(BuildContext context) {
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Color.fromRGBO(140, 132, 226, 1.0),
@@ -186,10 +190,11 @@ class _MyWidgetState extends State<MyWidget> {
                             ),
                           ),
                         ),
+                        
                         if (_isRecoding)
                           Padding(
                             padding: const EdgeInsets.only(
-                              bottom: 90.0,
+                              bottom: 85.0,
                               left: 20.0,
                             ),
                             child: Recorder(
